@@ -1,0 +1,3 @@
+constants
+flickrAlphabet
+	^ '123456789abcdefghijkmnopqrstuvwxyzABCDEFGHJKLMNPQRSTUVWXYZ'

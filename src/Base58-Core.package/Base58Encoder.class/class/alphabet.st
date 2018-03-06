@@ -1,0 +1,3 @@
+constants
+alphabet
+	^self bitcoinAlphabet 

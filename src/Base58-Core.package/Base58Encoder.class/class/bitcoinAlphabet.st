@@ -1,0 +1,3 @@
+constants
+bitcoinAlphabet
+	^'123456789ABCDEFGHJKLMNPQRSTUVWXYZabcdefghijkmnopqrstuvwxyz'
