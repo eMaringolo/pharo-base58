@@ -1,0 +1,3 @@
+checksum
+checkSumSize
+	^ 4

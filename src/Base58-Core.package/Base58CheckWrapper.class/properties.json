@@ -1,14 +1,15 @@
 {
-	"commentStamp" : "EstebanMaringolo 3/10/2018 02:19",
+	"commentStamp" : "EstebanMaringolo 3/10/2018 01:08",
 	"super" : "Object",
 	"category" : "Base58-Core",
 	"classinstvars" : [ ],
 	"pools" : [ ],
 	"classvars" : [ ],
 	"instvars" : [
-		"alphabet",
-		"bytesStream"
+		"version",
+		"payload",
+		"checksum"
 	],
-	"name" : "Base58Encoder",
+	"name" : "Base58CheckWrapper",
 	"type" : "normal"
 }

@@ -1,3 +1,3 @@
 configuration
 beBitcoin
-	alphabet := self class bitcoinAlphabet 
+	alphabet := nil

@@ -1,18 +1,19 @@
 encoding
 encode: aByteArray
-	| bignumber data |
+	| remainder data |
 	data := aByteArray asByteArray.
-	bignumber := self convertByteArrayToInteger: data.
+	remainder := self convertByteArrayToInteger: data.
 	^ (String
 		streamContents: [ :s | 
-			[ bignumber >= 58 ]
-				whileTrue: [ 
-					s
-						nextPut:
-							(self alphabet at:
-								bignumber \\ 58 + 1).
-					bignumber := bignumber // 58.			
-							 ].
-			bignumber > 0
-				ifTrue: [ s nextPut: (self alphabet at: bignumber + 1) ] ])
-		reversed
+			[ remainder >= 58 ]
+				whileTrue: [ s nextPut: (self alphabet at: remainder \\ 58 + 1).
+					remainder := remainder // 58 ].
+			remainder isZero
+				ifFalse: [ s nextPut: (self alphabet at: remainder + 1) ].
+
+			"Pad with 1 if leading bytes are zero."
+			(data notEmpty and: [ data first isZero ])
+				ifTrue: [ | leadingZeros |
+					leadingZeros := data readStream.
+					[ leadingZeros atEnd not and: [ leadingZeros next isZero ] ]
+						whileTrue: [ s nextPut: $1 ] ] ]) reversed

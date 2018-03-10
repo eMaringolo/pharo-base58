@@ -1,5 +1,5 @@
 tests
-testEncode
+testEncodeCheck
 	
 	self validPairs do: [:assoc |
 		| encoder |
