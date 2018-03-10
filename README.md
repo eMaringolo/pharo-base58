@@ -3,6 +3,18 @@ Base58 and most importantly [Base58Check](https://en.bitcoin.it/wiki/Base58Check
 
 Base58 is mostly used in cryptocurrencies such as Bitcoin, but it was also used by Flickr. This encoder supports both alphabets.
 
+## Installation
+
+No Baseline yet, a single package with no external dependencies including one test class.
+
+```
+Gofer it
+  repository: (MCRepository fromUrl: 'github://eMaringolo/pharo-base58/src'); 
+  package: 'Base58-Core'; 
+  load.
+```
+
+
 ## API
 
 ### `#encode: aByteArray`
